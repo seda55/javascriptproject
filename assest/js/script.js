@@ -351,6 +351,29 @@ function registerUser(name, avatar) {
   updateUserInfo();
 }
 
+// function updateUserInfo() {
+//   const user = JSON.parse(localStorage.getItem("user"));
+//   const loginLink = document.getElementById("login-link");
+//   const registerLink = document.getElementById("register-link");
+//   const logoutLink = document.getElementById("logout-link");
+//   const userInfo = document.getElementById("user-info");
+//   const userName = document.getElementById("user-name");
+//   const userAvatar = document.getElementById("user-avatar");
+
+//   if (user) {
+//     loginLink.classList.add("hidden");
+//     registerLink.classList.add("hidden");
+//     logoutLink.classList.remove("hidden");
+//     userInfo.classList.remove("hidden");
+//     userName.textContent = user.name;
+//     userAvatar.src = user.avatar || "https://picsum.photos/200/300";
+//   } else {
+//     loginLink.classList.remove("hidden");
+//     registerLink.classList.remove("hidden");
+//     logoutLink.classList.add("hidden");
+//     userInfo.classList.add("hidden");
+//   }
+// }
 function updateUserInfo() {
   const user = JSON.parse(localStorage.getItem("user"));
   const loginLink = document.getElementById("login-link");
@@ -359,19 +382,41 @@ function updateUserInfo() {
   const userInfo = document.getElementById("user-info");
   const userName = document.getElementById("user-name");
   const userAvatar = document.getElementById("user-avatar");
+  const wishlistLink = document.getElementById("wishlist-link");
+  const basketLink = document.getElementById("basket-link");
 
   if (user) {
+    // İstifadəçi daxil olub
     loginLink.classList.add("hidden");
     registerLink.classList.add("hidden");
     logoutLink.classList.remove("hidden");
     userInfo.classList.remove("hidden");
     userName.textContent = user.name;
     userAvatar.src = user.avatar || "https://picsum.photos/200/300";
+
+    // Wishlist və basket bağlantılarını aktivləşdir
+    wishlistLink.addEventListener("click", () => {
+      window.location.href = "./wishlist.html";
+    });
+    basketLink.addEventListener("click", () => {
+      window.location.href = "./basket.html";
+    });
   } else {
+    // İstifadəçi daxil olmayıb
     loginLink.classList.remove("hidden");
     registerLink.classList.remove("hidden");
     logoutLink.classList.add("hidden");
     userInfo.classList.add("hidden");
+
+    // Wishlist və basket bağlantılarını yalnız girişlə aktiv et
+    const requireLogin = (e) => {
+      e.preventDefault();
+      alert("Zəhmət olmasa, əvvəlcə qeydiyyatdan keçin və ya daxil olun.");
+      window.location.href = "./register.html";
+    };
+
+    wishlistLink.addEventListener("click", requireLogin);
+    basketLink.addEventListener("click", requireLogin);
   }
 }
 
