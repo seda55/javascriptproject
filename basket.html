@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket</title>
+  <link rel="stylesheet" href="./assest/css/basket.css">
+</head>
+<body>
+  <h1>My Basket</h1>
+  <div id="basket-container"></div>
+  <div class="basket-summary">
+    <h3>Your subtotal: <span id="subtotal">US $0.00</span></h3>
+    <h3>Total: <span id="total">US $0.00</span></h3>
+    <label for="promo-code">Discount promo code</label>
+    <input type="text" id="promo-code" placeholder="Enter promo code">
+    <button class="apply-discount" onclick="applyDiscount()">Apply</button>
+    
+    <div class="cart-buttons">
+      <button class="confirm-cart" onclick="confirmCart()">Confirm Cart</button>
+      <button class="cash-payment">Cash payment</button>
+    </div>
+  </div>
+  <script src="./assest/js/basket.js"></script>
+</body>
+</html>
