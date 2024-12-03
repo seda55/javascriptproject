@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +89,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 20px;
-    /* background: #f9ecee; */
   }
   
   .promo-text {
@@ -197,14 +195,13 @@
     justify-content: center;
     align-items: center;
     background-color: #f9f9f9;
-    overflow-x: auto; /* Üfüqi sürüşdürmə əlavə edir */
+    overflow-x: auto; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Hər bir kart */
   .category-card {
-    flex: 0 0 auto; /* Üfüqi sürüşdürmə üçün lazımdır */
+    flex: 0 0 auto; 
     width: 200px;
     text-align: center;
     background-color: #fff;
@@ -214,22 +211,18 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Şəkil */
   .category-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
   }
-  
-  /* Kart məzmunu */
-  .category-card p {
+    .category-card p {
     font-size: 16px;
     font-weight: bold;
     color: #333;
     margin: 10px 0;
   }
   
-  /* Hover effektləri */
   .category-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -318,15 +311,15 @@
   
   .product-badge {
     position: absolute;
-    top: 10px; /* Kartın yuxarı küncündən məsafəsi */
-    left: 10px; /* Sol tərəfdən məsafəsi */
-    z-index: 10; /* Şəkildən yuxarıda olması üçün */
+    top: 10px; 
+    left: 10px; 
+    z-index: 10; 
   }
   
   .favorite-icon {
     font-size: 20px;
-    color: #ff0000; /* Ürəyin rəngi */
-    background: rgba(255, 255, 255, 0.8); /* Şəffaf ağ fon */
+    color: #ff0000; 
+    background: rgba(255, 255, 255, 0.8); 
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
@@ -334,12 +327,11 @@
   }
   
   .favorite-icon:hover {
-    color: #e60000; /* Hover zamanı rəng */
-    transform: scale(1.1); /* Hover zamanı böyümə effekti */
+    color: #e60000; 
+    transform: scale(1.1); 
   }
   
   
-  /* Footer ümumi tərtibat */
 footer {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -355,7 +347,6 @@ footer {
   margin: 0 auto;
 }
 
-/* About bölməsi */
 .footer-about {
   flex: 1 1 300px;
   margin-bottom: 20px;
@@ -392,7 +383,6 @@ footer {
   color: #fff;
 }
 
-/* Links bölməsi */
 .footer-links {
   display: flex;
   flex: 2 1 600px;
@@ -428,7 +418,6 @@ footer {
   text-decoration: underline;
 }
 
-/* Footer alt xətti */
 .footer-bottom {
   margin-top: 20px;
   display: flex;

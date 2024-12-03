@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (registerForm) {
         registerForm.addEventListener("submit", (event) => {
-            event.preventDefault(); // Formun avtomatik göndərilməsini dayandırırıq.
-
+            event.preventDefault(); 
             const nameInput = document.getElementById("name").value.trim();
             const passwordInput = document.getElementById("password").value.trim();
 
@@ -13,17 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Yeni istifadəçi məlumatlarını saxlayırıq.
             const user = {
                 name: nameInput,
                 password: passwordInput,
             };
 
-            // LocalStorage-a məlumat əlavə edirik.
             localStorage.setItem("user", JSON.stringify(user));
             alert("Account successfully created!");
 
-            // Ana səhifəyə yönləndirik.
             window.location.href = "index.html";
         });
     } else {

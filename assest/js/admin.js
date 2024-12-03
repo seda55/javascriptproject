@@ -1,4 +1,3 @@
-// Detalları göstərən funksiya
 function renderProductDetails() {
     const productDetailsContainer = document.getElementById("product-details");
     const product = JSON.parse(localStorage.getItem("productDetails"));
@@ -36,7 +35,6 @@ function renderProductDetails() {
     productDetailsContainer.appendChild(productCard);
   }
   
-  // Səbətə əlavə etmə funksiyası
   function addToCartHandler(product) {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(product);
@@ -44,6 +42,5 @@ function renderProductDetails() {
     alert(`${product.title} added to cart!`);
   }
   
-  // Detalları göstər
   renderProductDetails();
   
